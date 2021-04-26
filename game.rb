@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Game
   def initialize
     @players = {}
@@ -17,7 +19,7 @@ class Game
     change_player
     Question.new(@players[@turn])
     "#{@players['p1'].name}: #{@players['p1'].lives_left} vs #{@players['p2'].name}: #{@players['p2'].lives_left}"
-    if @players[@turn].lives == 0
+    if @players[@turn].lives.zero?
       change_player
       puts "#{@players[@turn].name} wins with a score of #{@players[@turn].lives_left}"
       puts '----- GAME OVER -----'

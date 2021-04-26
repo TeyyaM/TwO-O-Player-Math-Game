@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Question
   def initialize(player)
     num1 = rand(1..20)
