@@ -15,6 +15,7 @@ class Game
     @turn = @turn == 'p1' ? 'p2' : 'p1'
   end
 
+  # recursive, calls on itself until the game ends
   def ask_question
     change_player
     Question.new(@players[@turn])
